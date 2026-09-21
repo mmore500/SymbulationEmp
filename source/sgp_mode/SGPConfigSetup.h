@@ -31,14 +31,14 @@ EMP_EXTEND_CONFIG(SymConfigSGP, SymConfigBase,
   VALUE(SGP_MUT_PER_BIT_RATE, double, 0.005, "Per-bit mutation rate for sgp programs"),
 
   GROUP(CUSTOM_PROGRAM, "Custom Program Settings"),
-  VALUE(HOST_PROGRAM_PATH, std::string, "Default-Config-jsons/NandProgram100.json", "Json file that provides hosts a custom starting program"),
-  VALUE(SYM_PROGRAM_PATH, std::string, "Default-Config-jsons/NandProgram100.json", "Json file that provides symbionts a custom starting program"),
+  VALUE(HOST_PROGRAM_PATH, std::string, "default-config-jsons/NandProgram100.json", "Json file that provides hosts a custom starting program"),
+  VALUE(SYM_PROGRAM_PATH, std::string, "default-config-jsons/NandProgram100.json", "Json file that provides symbionts a custom starting program"),
 
 
   GROUP(STRESS, "Stress Settings"),
   VALUE(ENABLE_STRESS, bool, false, "Stress interactions enabled?"),
   VALUE(STRESS_TYPE, std::string, "mutualist", "What kind of stress symbionts should be incorporated in stressful environments? (Options: 'mutualist', 'parasite', 'neutral')"),
-  VALUE(STRESS_FREQUENCY, size_t, 300, "How often should stress events occur (in updates)?"),
+  VALUE(STRESS_INTERVAL, size_t, 300, "How many updates between stress events?"),
   VALUE(PARASITE_DEATH_CHANCE, double, 0.75, "What death chance does a parasite confer?"),
   VALUE(MUTUALIST_DEATH_CHANCE, double, 0.0, "What death chance does a mutualist confer?"),
   VALUE(BASE_DEATH_CHANCE, double, 0.75, "What death chance does a host have in the absence of symbionts?"),
